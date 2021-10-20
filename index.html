@@ -13,18 +13,17 @@
 </head>
 
 <body id="main">
-
     <nav>
 
         <a class="nav-brand" href="index.html">
-            <h1 >
+            <h1>
                 <i class="las la-mug-hot"></i>
-                Simple Coffee 
+                Simple Coffee
             </h1>
         </a>
 
         <!-- Desktop Nav -->
-        
+
         <ul id="desktop-nav">
             <li><a href="products.html">Products</a></li>
             <li><a href="about.html"></a> About</li>
@@ -33,7 +32,7 @@
         </ul>
 
         <!-- Mobile Nav -->
-        
+
 
         <span class="open-slide">
             <a href="#" onclick="openSlideMenu()">
@@ -49,6 +48,66 @@
             <a href="cart.html">Cart - <span id="cart-count"> 0 </span></a>
         </div>
     </nav>
+
+
+    <div class="container">
+
+        <!-- Auto SlideShow -->
+        <div class="slide-show-container">
+
+            <div class="slide slide-fade">
+                <div class="slide-card">
+                    <h2> Hario V60 </h2>
+                    <p> Brew high extractions pour-overs like a pro and bring out beatiful, sweet tasting notes. </p>
+                    <a class="slide-card-btn red-btn" href="v60.html">SHOP NOW</a>
+                </div>
+
+                <div class="slide-img slide-1">
+                    <img src="./images/slide-1.jpg" alt="Image of Hario V60">
+
+                </div>
+            </div>
+        
+            <div class="slide slide-fade">
+                <div class="slide-card ">
+                    <h2>Cupping Sessions</h2>
+                    <p> Learn to taste coffee with a professional cupping session! You'll compare rare, delicious
+                        coffees
+                        side-by-side and learn to detect even the subtlest of notes.</p>
+                    <a class="slide-card-btn red-btn " href="v60.html">BOOK NOW</a>
+                </div>
+
+                <div class="slide-img">
+                    <img src="./images/slide-2.jpg" alt="Image of Hario V60">
+                </div>
+
+            </div>
+
+            <div class="slide slide-fade">
+                <div class="slide-card">
+                    <h2>Filter Brewing Master Class</h2>
+                    <p> Learn everything you need to know about coffee extraction and filter brewing methods to brew the
+                        best coffee you've ever had. </p>
+                    <a class="slide-card-btn red-btn " href="v60.html">BOOK NOW</a>
+
+                </div>
+
+                <div class="slide-img">
+                    <img src="./images/slide-3.jpg" alt="Image of Hario V60">
+                </div>
+
+            </div> 
+
+            <div id="dots-container">
+                <span class="dot" onclick="dotSlideShow(0)"></span>
+                <span class="dot" onclick="dotSlideShow(1)"></span>
+                <span class="dot" onclick="dotSlideShow(2)"></span>
+            </div>
+
+        </div>
+    </div>
+
+
 
 
 

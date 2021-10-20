@@ -4,15 +4,38 @@
     margin: 0;
 }
 
-html,body{
+html, body{
     font-family: Roboto;
-    color:rgb(28, 28, 28)
+    color:rgb(28, 28, 28);
+    min-height: 100vh;
 }
 
 
 a {
     text-decoration: none;
     color: inherit;
+}
+
+.container {
+    display: flex;
+    margin: 0 auto;
+}
+
+.red-btn{
+    padding: 1rem;
+    width: auto;
+    display: inline-block;
+    font-size: 1rem;
+    margin-top: 30px;
+    text-align: center;
+    background-color: #d42927;
+    color: #fff;
+    transition: all ease .3s;
+}
+
+.red-btn:hover{
+    opacity: 0.8;
+    background-color: #000000;
 }
 
 /* Navbar */
@@ -40,6 +63,7 @@ nav {
     padding-top: 60px;
     transition: all 0.4s ease;
     font-weight: bold;
+    background-color: #fff;
 }
 
 .btn-close {
@@ -59,6 +83,117 @@ nav {
     border-bottom: 1px solid rgb(63, 62, 62);
     text-transform: uppercase;
 }
+
+
+
+/* Index */
+    /* slideshow */
+
+    .slide-show-container {
+        height: 70vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .slide {
+        width: 100%;
+        height: 100%;
+        display: none;
+        flex-direction: column-reverse;
+    }
+
+    .slide-active{
+        display: flex;
+    }
+
+    .slide-card{
+        width: 100%;
+        height: 50%;
+        background-color: rgb(252, 246, 237);
+        padding: 2rem;
+        font-size: 1.5rem;
+    }
+    
+
+    /* slide fading animation */
+    .slide-fade {
+        -webkit-animation-name: slide-fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: slide-fade;
+        animation-duration: 1s;
+    }
+
+    @-webkit-keyframes slide-fade {
+        from {
+            opacity: .4
+        }
+        
+        to {
+            opacity: 1
+        }
+    }
+
+    @keyframes slide-fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+
+    .slide-card p{
+        font-size: 1.3rem;
+        margin-top: 30px;
+        max-width: 400px;
+    }
+
+    .slide-card-btn {
+        width: 100%;        
+    }
+
+    .slide-img {
+        width: 100%;
+        height: 50%;
+    }
+
+    .slide-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* slideshow dot controls */
+
+    #dots-container{
+        position: relative;
+        bottom: 55%;
+    }
+
+    .dot{
+        width: 12px;
+        height: 12px;
+        margin-right: 10px;
+        display: inline-block;
+        border-radius: 50%;
+        background-color: #000000;
+        opacity: 0.5;
+        cursor: pointer;
+        transition: background-color 0.6s ease;
+    }
+
+    .dot-active, .dot:hover {
+        background-color: rgb(252, 246, 237);
+    } 
+
+
+
+
+
 
 /* Medias */
 

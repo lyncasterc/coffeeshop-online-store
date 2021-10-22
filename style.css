@@ -374,6 +374,7 @@ nav {
     width: 100%;
     margin-top: 2rem;
     padding-bottom: 1rem;
+    margin: 0 auto;
   } 
 
   .listing-box img{

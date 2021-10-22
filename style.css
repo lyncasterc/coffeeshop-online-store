@@ -379,7 +379,7 @@ nav {
   .listing-box img{
     height: auto;
     width: 100%;
-    max-width: 396px;
+    max-width: 100%;
   }
 
   .listing-name{
@@ -389,7 +389,7 @@ nav {
   }
 
   .listing-description{
-    max-width: 350px;
+    max-width: 100%;
     margin-top: 10px;
     margin: 0 auto;
     text-align: center;

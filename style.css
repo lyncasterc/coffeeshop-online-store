@@ -304,6 +304,47 @@ nav {
     text-align: left;
   }
 
+  /* Contact */
+
+  .contact-form-container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 4rem;
+  }
+  .contact-form-container input, textarea{
+    margin-bottom: 20px;
+    
+  }
+  .contact-form-container input{
+    padding: 5px;
+    border: 1px solid #2e2925;
+    outline: none;
+
+  }
+
+  #contact-container form h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    padding-bottom: 3rem;
+    text-align: justify;
+  }
+
+  #contact-container form label {
+    padding-bottom: 5px;
+    font-size: 1rem;
+    font-weight: bolder;
+  }
+
+  #contact-container form label, #contact-container form button {
+    display: block;
+  }
+
+  #contact-container form button {
+    border: none;
+    width: 100%;
+
+  }
+
 /* Footer */
   footer {
     background: #2e2925;

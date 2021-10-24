@@ -2,6 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  /* border: 1px solid red; */
 }
 
 html, body{
@@ -13,17 +14,13 @@ html, body{
 #main{
   display: flex;
   flex-direction: column;
+  padding-top: 53px;
 }
 
 
 a {
   text-decoration: none;
   color: inherit;
-}
-
-.container {
-  display: flex;
-  margin: 0 auto;
 }
 
 .red-btn{
@@ -54,6 +51,11 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  background-color: white;
+  width: 100%;
   border-bottom: 1px solid rgb(63, 62, 62);
 }
 
@@ -196,12 +198,13 @@ nav {
     } 
 
     #gallery {
-      /* margin-top: 1rem; */
+      margin-top: 1rem;
       display: flex;
       flex-wrap: wrap;
       background: rgb(252, 246, 237);
       text-align: center;
-      padding-left: 2.5rem;
+      padding: 2.5rem;
+      gap: 2%;
     }
 
     #gallery > div {flex:1;padding-right:2.5rem;}
@@ -227,8 +230,10 @@ nav {
       
       .column {
         display:flex;
-        flex-direction:column;
+        flex-direction: column;
         flex: 50%;
+        padding: 0 !important;
+      
       }
       
       #gallery img:hover {
@@ -306,19 +311,19 @@ nav {
   /* Contact */
 
   .contact-form-container {
-    width: 300px;
+    width: 350px;
     margin: 0 auto;
     padding: 4rem;
   }
   .contact-form-container input, textarea{
     margin-bottom: 20px;
+    width: 100%;
     
   }
   .contact-form-container input{
     padding: 5px;
     border: 1px solid #2e2925;
     outline: none;
-
   }
 
   #contact-container form h2 {
@@ -402,11 +407,110 @@ nav {
 
 /* Medias */
 
+  @media(min-width: 1000px){
+    .slide{
+      flex-direction: row;
+    }
+
+    .slide-card{
+      height: 100%;
+      padding-top: 10%;
+    }
+
+    #dots-container{
+      position: relative;
+      left: 26%;
+      top: -8%;
+  }
+    .slide-card p{
+      width: 400px;
+    }
+    .slide-card-btn{
+      width: 50%
+    }
+}
+
   @media (min-width: 768px) {
-  #desktop-nav{
-    display: block;
+    
+
+    #desktop-nav{
+      display: block;
+    }
+    .open-slide {
+      display: none;
+    }
+    .slide-img{
+      height: 100%;
+    }
+
+    #dots-container{
+      position: relative;
+      bottom: 42%;
+
+    } 
+
+
+    #desktop-nav {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+      color: #7c6e65;
+      padding: 10px;
+    }
+
+    #desktop-nav a{
+      padding: 20px;
+      transition: color ease 0.3s;
+    }
+
+    #desktop-nav a:hover{
+      color:#2e2925;
+    }
+
+  
   }
-  .open-slide {
-    display: none;
+
+  @media (min-width: 650px) {
+    
+  
+    #gallery{
+      margin-top: 2rem;
+    } 
+
+    .slide-card p{
+      max-width: 100%;
+    }
   }
+
+  @media (max-width: 375px){
+    
+    #gallery{
+      margin-top: 3rem;
+      padding: .5rem;
+    }
+
+    .slide-show-container{
+      height: 100vh;
+    }
+
+
+    #dots-container{
+      position: relative;
+      
+    }
+    
+  }
+
+  @media (max-width: 320px){
+    #side-menu{
+      top: 9.4%;
+    }
+    
+    .slide-show-container{
+      height: 125vh;
+    }
+
+
+    
+    
   }

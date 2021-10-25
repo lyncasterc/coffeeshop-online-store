@@ -482,12 +482,7 @@ nav {
       width: 600px;
     }
 
-    .products-box{
-    }
-   
     
-
-  
   }
 
   @media (min-width: 650px) {
@@ -517,6 +512,9 @@ nav {
       position: relative;
       
     }
+    .about-media{
+      display: block;
+    }
     
   }
 
@@ -529,6 +527,7 @@ nav {
       height: 125vh;
     }
 
+    
     
     
   }

@@ -57,6 +57,7 @@ nav {
   background-color: white;
   width: 100%;
   border-bottom: 1px solid rgb(63, 62, 62);
+  
 }
 
 #side-menu {
@@ -252,8 +253,8 @@ nav {
   
   .products-container, .listing-container{
     padding: 1rem;
-    width: 100%;    
-  }
+    width: 100%;   
+}
 
 
   #products-h2 {
@@ -432,6 +433,12 @@ nav {
     }
     .contact-form-container{
       width: 50%;
+    }
+
+    .listing-container{
+      width: 600px;
+      margin: 0 auto;
+      margin-top: 70px;
     }
 }
 

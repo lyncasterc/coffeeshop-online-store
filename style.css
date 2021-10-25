@@ -313,9 +313,9 @@ nav {
   /* Contact */
 
   .contact-form-container {
-    width: 350px;
+    width: 80%; 
     margin: 0 auto;
-    padding: 4rem;
+    padding: 4rem; 
   }
   .contact-form-container input, textarea{
     margin-bottom: 20px;
@@ -516,6 +516,9 @@ nav {
       display: block;
     }
     
+    .contact-form-container{
+      width: 100%;
+    }
   }
 
   @media (max-width: 320px){
@@ -527,7 +530,6 @@ nav {
       height: 125vh;
     }
 
-    
     
     
   }

@@ -510,7 +510,39 @@ nav {
       height: 125vh;
     }
 
-
     
     
   }
+
+ 
+
+  @media all and (max-width: 959px) and (orientation: landscape) {
+    .slide-show-container{
+
+      height: 200vh;
+    }
+
+    #dots-container{
+      position: relative;
+      bottom: 35%;
+    } 
+
+
+}
+
+
+@media all and (max-width: 812px) and (orientation: landscape) {
+
+  #dots-container{
+    position: relative;
+    bottom: 42%;
+  } 
+}
+
+@media all and (max-width: 736px) and (orientation: landscape) {
+
+  #dots-container{
+    position: relative;
+    bottom: 57%;
+  } 
+}

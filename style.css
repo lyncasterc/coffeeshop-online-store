@@ -430,6 +430,9 @@ nav {
     .slide-card-btn{
       width: 50%
     }
+    .contact-form-container{
+      width: 50%;
+    }
 }
 
   @media (min-width: 768px) {

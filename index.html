@@ -17,12 +17,14 @@
 
         <div class="nav-left">
 
+            <!-- Mobile Nav Menu Button -->
             <span class="open-slide">
                 <a href="#" onclick="openSlideMenu()">
                     <i class="las la-bars la-2x"></i>
                 </a>
             </span>
 
+            <!-- Nav Brand -->
             <a class="nav-brand" href="index.html">
                 <h1>
                     <i class="las la-mug-hot"></i>
@@ -31,6 +33,7 @@
             </a>
         </div>
 
+        <!-- Mobile Nav -->
 
         <div id="side-menu">
             <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
@@ -39,22 +42,33 @@
             <a href="contact.html">Contact</a>
             <a href="cart.html">Cart - <span id="cart-count"> 0 </span></a>
         </div>
+        
+
+        <div class="nav-right">
 
 
-        <!-- Desktop Nav -->
+            <!-- Desktop Nav -->
+    
+            <ul id="desktop-nav">
+                <li><a href="products.html">Products</a></li>
+    
+                <li><a href="about.html">About</a> </li>
+    
+                <li><a href="contact.html">Contact</a></li>
+    
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+    
+    
+            <!-- Cart Icon -->
+            <a href="#">
+                <i class="las la-shopping-bag la-2x">
+                </i>
+                <span id="bag-item-count">0</span>
+            </a>
+        </div>
 
-        <ul id="desktop-nav">
-            <li><a href="products.html">Products</a></li>
-
-            <li><a href="about.html">About</a> </li>
-
-            <li><a href="contact.html">Contact</a></li>
-
-            <li><a href="cart.html">Cart</a></li>
-        </ul>
-
-        <!-- Mobile Nav -->
-
+        
 
         
     </nav>

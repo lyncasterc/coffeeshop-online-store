@@ -14,8 +14,23 @@ const openSlideMenu = (slideoutID) => {
     const slideout = document.querySelector(`#${slideoutID}`);
 
     const width = slideout.style.width;
+
+    if(slideoutID === 'mobile-nav') {
+
+        slideout.style.width = (!width || width === '0%') ? '100%' : '0%';
+    } else {
+
+        if(window.innerWidth < 768) {
+
+            slideout.style.width = (!width || width === '0%') ? '100%' : '0%';
+
+        } else {
+
+            slideout.style.width = (!width || width === '0%') ? '30%' : '0%';
+        }
+    }
+
     const overflow = mainBody.style.overflow;
-    slideout.style.width = (!width || width === '0%') ? '100%' : '0%';
     mainBody.style.overflow = (!overflow || overflow === 'scroll') ? 'hidden' : 'scroll';
 }
 

@@ -17,7 +17,7 @@
 
         <div class="nav-left">
 
-            <!-- Mobile Nav Menu Button -->
+            <!-- Mobile Nav Burger Menu Button -->
             <span class="open-slide">
                 <a href="#" onclick="openSlideMenu()">
                     <i class="las la-bars la-2x"></i>
@@ -35,7 +35,7 @@
 
         <!-- Mobile Nav -->
 
-        <div id="side-menu">
+        <div id="mobile-nav" class="side-menu">
             <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
             <a href="products.html">Products</a>
             <a href="about.html">About</a>
@@ -61,15 +61,21 @@
     
     
             <!-- Cart Icon -->
-            <a href="#">
+            <a id="cart" href="#">
                 <i class="las la-shopping-bag la-2x">
                 </i>
-                <span id="bag-item-count">0</span>
+                <span id="bag-item-count" class="cart-count">0</span>
             </a>
         </div>
 
-        
 
+        <!-- Cart slideout -->
+        <div id="bag-slideout" class="side-menu">
+            <div id="bag-slideout-header">
+                <p>Your Cart (<span class="cart-count">0</span>)</p>
+                <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+            </div>
+        </div>
         
     </nav>
 

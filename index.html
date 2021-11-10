@@ -19,7 +19,7 @@
 
             <!-- Mobile Nav Burger Menu Button -->
             <span class="open-slide">
-                <a href="#" onclick="openSlideMenu()">
+                <a href="#" onclick="openSlideMenu('mobile-nav')">
                     <i class="las la-bars la-2x"></i>
                 </a>
             </span>
@@ -36,7 +36,7 @@
         <!-- Mobile Nav -->
 
         <div id="mobile-nav" class="side-menu">
-            <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+            <a href="#" class="btn-close" onclick="closeSlideMenu('mobile-nav')">&times;</a>
             <a href="products.html">Products</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
@@ -45,7 +45,6 @@
         
 
         <div class="nav-right">
-
 
             <!-- Desktop Nav -->
     
@@ -61,7 +60,7 @@
     
     
             <!-- Cart Icon -->
-            <a id="cart" href="#">
+            <a id="cart" href="#" onclick="openSlideMenu('bag-slideout')">
                 <i class="las la-shopping-bag la-2x">
                 </i>
                 <span id="bag-item-count" class="cart-count">0</span>
@@ -73,15 +72,13 @@
         <div id="bag-slideout" class="side-menu">
             <div id="bag-slideout-header">
                 <p>Your Cart (<span class="cart-count">0</span>)</p>
-                <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+                <a href="#" class="btn-close" onclick="closeSlideMenu('bag-slideout')">&times;</a>
             </div>
         </div>
         
     </nav>
 
-
     <!-- Auto SlideShow -->
-
 
     <div class="slide-show-container">
 
@@ -148,11 +145,6 @@
             <img class="coffee-img-3" src="./images/barista-2.jpg" alt="Barista brewing coffee with aeropress">
         </div>
     </section>
-
-
-
-
-
 
     <script src="main.js"></script>
 

@@ -10,19 +10,21 @@ let t;
 // Mobile Side Nav
 
 // open or close menu when tapping on burger
-const openSlideMenu = () => {
-    const width = sideMenu.style.width;
+const openSlideMenu = (slideoutID) => {
+    const slideout = document.querySelector(`#${slideoutID}`);
+
+    const width = slideout.style.width;
     const overflow = mainBody.style.overflow;
-    sideMenu.style.width = (!width || width === '0%') ? '100%' : '0%';
+    slideout.style.width = (!width || width === '0%') ? '100%' : '0%';
     mainBody.style.overflow = (!overflow || overflow === 'scroll') ? 'hidden' : 'scroll';
 }
 
 // close menu when tapping on X
-const closeSlideMenu = () => {
-    sideMenu.style.width = '0%'
+const closeSlideMenu = (slideoutID) => {
+    const slideout = document.querySelector(`#${slideoutID}`);
+    slideout.style.width = '0%'
     mainBody.style.overflow = 'scroll'
 }
-
 
 
 // Index Autoslide show

@@ -7,7 +7,9 @@ let slideIndex = 0;
 let t;
 
 
-// Mobile Side Nav
+
+
+// Mobile/Shopping Cart Slideouts
 
 // open or close menu when tapping on burger
 const openSlideMenu = (slideoutID) => {

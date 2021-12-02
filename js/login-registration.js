@@ -5,8 +5,6 @@ const registerForm = document.querySelector('#register-form');
 const loginForm = document.querySelector('#login-form');
 const usernameErrorMsg = document.querySelector('#username-error-msg');
 const loginErrorMsg = document.querySelector('#login-error-msg');
-
-
 const url = location.href.split('/').at(-1);
 
 const register = () => {

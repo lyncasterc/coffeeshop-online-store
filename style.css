@@ -17,12 +17,12 @@ html, body{
   padding-top: 53px;
 }
 
-
 a {
   text-decoration: none;
   color: inherit;
 }
 
+/* Buttons Styling */
 .red-btn{
   padding: 1rem;
   width: auto;
@@ -39,6 +39,55 @@ a {
   opacity: 0.8;
   background-color: #000000;
 }
+
+/* Forms Styling */
+.form-container {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.form-container input, textarea{
+  margin-bottom: 20px;
+  width: 100%; 
+}
+
+.form-container input{
+  padding: 5px;
+  border: 1px solid #2e2925;
+  outline: none;
+}
+
+.form-container form label {
+  padding-bottom: 5px;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+.form-container form label, .form-container form button {
+  display: block;
+}
+
+.form-container form button {
+  border: none;
+  width: 100%;
+
+}
+/* Form Errors */
+#username-error-msg, #login-error-msg { 
+  display: none;
+}
+
+.error-msg {
+  display: block !important;
+  color: #d42927;
+  margin-bottom: 10px;
+}
+
+.input-error {
+  border-color: #d42927 !important;
+  margin-bottom: 5px !important;
+}
+
 
 /* Navbar */
 
@@ -381,22 +430,7 @@ nav {
 
   /* Contact */
 
-  .contact-form-container {
-    width: 80%; 
-    margin: 0 auto;
-    padding: 4rem; 
-  }
-  .contact-form-container input, textarea{
-    margin-bottom: 20px;
-    width: 100%;
-    
-  }
-  .contact-form-container input{
-    padding: 5px;
-    border: 1px solid #2e2925;
-    outline: none;
-  }
-
+  
   #contact-container form h2 {
     font-size: 4rem;
     font-weight: bold;
@@ -404,21 +438,35 @@ nav {
     text-align: justify;
   }
 
-  #contact-container form label {
-    padding-bottom: 5px;
-    font-size: 1rem;
-    font-weight: bolder;
+  /* Login/Register */
+  #login-form h2, #register-form h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    
   }
 
-  #contact-container form label, #contact-container form button {
-    display: block;
+  #password {
+    margin-bottom: 0;
   }
 
-  #contact-container form button {
-    border: none;
+  .form-link-container {
     width: 100%;
-
+    text-align: center;
+    margin-top: .85rem;
   }
+
+  .form-link-container a{
+    font-size: 14px;
+    color:rgb(63, 62, 62);
+  }
+
+  .form-link-container a:hover{
+    font-size: 14px;
+    color:#000;
+  }
+
+  
 
 /* Footer */
   footer {
@@ -607,6 +655,7 @@ nav {
     .slide-show-container{
       height: 125vh;
     }
+ 
   }
 
   @media all and (max-width: 959px) and (orientation: landscape) {

@@ -54,5 +54,8 @@ if(url === 'login.html'){
     login();
 } else if (url === 'register.html'){
     register();
+} else if(!loggedIn()){
+    location.href = 'login.html';
+    alert('Sign in or create an account to access that page!')
 }
 

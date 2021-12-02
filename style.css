@@ -72,6 +72,21 @@ a {
   width: 100%;
 
 }
+/* Form Errors */
+#username-error-msg, #login-error-msg { 
+  display: none;
+}
+
+.error-msg {
+  display: block !important;
+  color: #d42927;
+  margin-bottom: 10px;
+}
+
+.input-error {
+  border-color: #d42927 !important;
+  margin-bottom: 5px !important;
+}
 
 
 /* Navbar */
@@ -356,7 +371,7 @@ nav {
   }
 
   /* Login/Register */
-  #sign-in-form h2, #register-form h2 {
+  #login-form h2, #register-form h2 {
     font-size: 2.5rem;
     margin-bottom: 2rem;
     text-align: center;
@@ -382,7 +397,6 @@ nav {
     font-size: 14px;
     color:#000;
   }
-
 
   
 

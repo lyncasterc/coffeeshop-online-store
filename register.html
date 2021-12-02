@@ -19,6 +19,7 @@
         <form action="#">
             <label for="username"> USERNAME </label>
             <input type="text" name="username" id="username" required>
+            <p id="username-error-msg">Username already exists! Try another.</p>
 
             <label for="password"> PASSWORD </label>
             <input type="password" name="password" id="password" required>
@@ -31,6 +32,9 @@
             <a href="login.html"> Already have an account? Login here. </a>
         </div>
     </div>
+
+    <script src="./js/cookies-functions.js"></script>
+    <script src="./js/login-registration.js"></script>
 </body>
 
 </html>

@@ -14,9 +14,10 @@
 
 <body id="main">
 
-    <div id="sign-in-form" class="form-container">
+    <div id="login-form" class="form-container">
         <h2>Sign In</h2>
         <form action="#">
+            <p id="login-error-msg">Username and/or password is incorrect.</p>
             <label for="username"> USERNAME </label>
             <input type="text" name="username" id="username" required>
 
@@ -31,6 +32,9 @@
             <a href="register.html"> Create account </a>
         </div>
     </div>
+
+    <script src="./js/cookies-functions.js"></script>
+    <script src="./js/login-registration.js"></script>
 </body>
 
 </html>

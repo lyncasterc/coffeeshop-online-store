@@ -8,7 +8,6 @@ let t;
 
 
 
-
 // Mobile/Shopping Cart Slideouts
 
 // open or close menu when tapping on burger
@@ -73,5 +72,6 @@ const slideShow = () => {
     }, 5500);
 
 };
+
 
 slideShow();

@@ -197,7 +197,8 @@ nav {
 #bag-slideout-items {
   padding: 0rem .85rem;
   width: 100%;
-  overflow-y: scroll;
+  height: 77%;
+  overflow-y: auto;
 }
 .bag-slideout-item {
   width: 100%;

@@ -168,6 +168,7 @@ nav {
   background-color: #d42927;
 }
 
+/* Cart slideout */
 #bag-slideout {
   right: 0;
   top: 0;
@@ -191,7 +192,7 @@ nav {
   right: 0;
 }
 
-/* Shopping Bag Items */
+/* Cart slideout Items */
 
 #bag-slideout-items {
   padding: 0rem .85rem;
@@ -209,6 +210,19 @@ nav {
 .bag-item-info {
   display: flex;
   gap: 1rem;
+}
+
+.bag-item-title {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+
+}
+
+.delete-item-btn {
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .price-quantity-container {

@@ -1,5 +1,7 @@
 let itemsList = document.querySelector('#bag-slideout-items');
 let subtotal = document.querySelector('#subtotal-count');
+const cartBtn = document.querySelector('#cart');
+const logoutBtns = document.querySelectorAll('.logout-btn');
 const addToCartBtn = document.querySelector('.add-btn');
 const cartCount = document.querySelectorAll('.cart-count');
 const catalog = {
@@ -109,11 +111,23 @@ const updateCart = () => {
     renderItems();
 }
 
+const logout = () => {
+    logoutBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            deleteCookie('session_user');
+            localStorage.removeItem('session_cart');
+            location.href = 'login.html';
+            alert('You have logged out');
+        });
+    });
+};
+
 if(addToCartBtn){
 
     addToCartBtn.addEventListener('click', (e) => {
         addItem(e.target.id);
         updateCart();
+        cartBtn.click();
     });
 }
 
@@ -126,4 +140,5 @@ itemsList.addEventListener('click', (e) => {
 
 updateQuantity();
 updateCart();
+logout();
 

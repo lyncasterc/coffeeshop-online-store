@@ -26,7 +26,7 @@ const createItem = (itemID) => {
             <img src="./images/${itemID}.jpg" alt="" width="100" height="100" style="object-fit: cover;">
             <div class="bag-item-title">
                 <p class="item-title"> ${catalog[itemID]['name']} </p>
-                <i data-id="v60" class="delete-item-btn las la-trash-alt"></i>
+                <i data-id="${itemID}" class="delete-item-btn las la-trash-alt"></i>
             </div>
         </div>
         
@@ -126,6 +126,4 @@ itemsList.addEventListener('click', (e) => {
 
 updateQuantity();
 updateCart();
-
-//test if incrementing quantity works with two different items
 

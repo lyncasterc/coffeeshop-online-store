@@ -17,41 +17,84 @@
 <body id="main">
     <nav>
 
-        <a class="nav-brand" href="index.html">
-            <h1>
-                <i class="las la-mug-hot"></i>
-                Simple Coffee
-            </h1>
-        </a>
+        <div class="nav-left">
 
-        <!-- Desktop Nav -->
+            <!-- Mobile Nav Burger Menu Button -->
+            <span class="open-slide">
+                <a href="#" onclick="openSlideMenu('mobile-nav')">
+                    <i class="las la-bars la-2x"></i>
+                </a>
+            </span>
 
-        <ul id="desktop-nav">
-            <li><a href="products.html">Products</a></li>
-
-            <li><a href="about.html">About</a> </li>
-
-            <li><a href="contact.html">Contact</a></li>
-
-            <li><a href="cart.html">Cart</a></li>
-        </ul>
+            <!-- Nav Brand -->
+            <a class="nav-brand" href="index.html">
+                <h1>
+                    <i class="las la-mug-hot"></i>
+                    Simple Coffee
+                </h1>
+            </a>
+        </div>
 
         <!-- Mobile Nav -->
 
-
-        <span class="open-slide">
-            <a href="#" onclick="openSlideMenu()">
-                <i class="las la-bars la-2x"></i>
-            </a>
-        </span>
-
-        <div id="side-menu">
-            <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+        <div id="mobile-nav" class="side-menu">
+            <a href="#" class="btn-close" onclick="closeSlideMenu('mobile-nav')">&times;</a>
             <a href="products.html">Products</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
             <a href="cart.html">Cart - <span id="cart-count"> 0 </span></a>
         </div>
+        
+
+        <div class="nav-right">
+
+            <!-- Desktop Nav -->
+    
+            <ul id="desktop-nav">
+                <li><a href="products.html">Products</a></li>
+    
+                <li><a href="about.html">About</a> </li>
+    
+                <li><a href="contact.html">Contact</a></li>
+    
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+    
+    
+            <!-- Cart Icon -->
+            <a id="cart" href="#" onclick="openSlideMenu('bag-slideout')">
+                <i class="las la-shopping-bag la-2x">
+                </i>
+                <span id="bag-item-count" class="cart-count">0</span>
+            </a>
+        </div>
+
+
+        <!-- Cart slideout -->
+        <div id="bag-slideout" class="side-menu">
+            <div id="bag-slideout-header">
+                <p>Your Cart (<span class="cart-count">0</span>)</p>
+                <a href="#" class="btn-close" onclick="closeSlideMenu('bag-slideout')">&times;</a>
+            </div>
+            <div id="bag-slideout-items">
+
+                <div class="bag-slideout-item">
+
+                    <div class="bag-item-info">
+                        <img src="./images/slide-1.jpg" alt="" width="100" height="100" style="object-fit: cover;">
+                        <p> Hario V60 </p>
+                    </div>
+                    
+                    <div class="bag-item-price">
+                        <span class="price-title">PRICE</span> <br>
+                        <span class="item-price">$50</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        
     </nav>
 
     <div class="about-container">

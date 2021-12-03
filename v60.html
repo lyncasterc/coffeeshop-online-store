@@ -42,7 +42,7 @@
             <a href="products.html">Products</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
-            <a href="cart.html">Cart - <span id="cart-count"> 0 </span></a>
+            <a href="cart.html">Cart - <span class="cart-count">  </span></a>
         </div>
         
 
@@ -73,7 +73,7 @@
         <!-- Cart slideout -->
         <div id="bag-slideout" class="side-menu">
             <div id="bag-slideout-header">
-                <p>Your Cart (<span class="cart-count">0</span>)</p>
+                <p>Your Cart (<span class="cart-count"></span>)</p>
                 <a href="#" class="btn-close" onclick="closeSlideMenu('bag-slideout')">&times;</a>
             </div>
             <div id="bag-slideout-items">
@@ -94,13 +94,13 @@
 
     <div class="listing-container">
         <div class="listing-box">
-            <img src="./images/slide-1.jpg" alt="image of V60">
+            <img src="./images/v60.jpg" alt="image of V60">
             <div class="listing-title">
                 <p class="listing-name">Hario V60 Kit</p>
                 <p>$30</p>
             </div>
 
-            <a href="#" class="red-btn add-btn">ADD TO CART</a>
+            <a href="#" id="v60" class="red-btn add-btn">ADD TO CART</a>
             
             <p class="listing-description">
                 The  <strong>Hario V60 </strong> is the most well-known pour-over cone in the specialty coffee world. It allows for perfect control of all the filter brewing variables to dial-in your perfect cup.
@@ -110,11 +110,9 @@
         </div>
     </div>
 
-    
-
-
-
+    <script src="./js/cart.js"></script>
     <script src="./js/main.js"></script>
+
 
     <!-- Footer -->
     <footer>

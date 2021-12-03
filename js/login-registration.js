@@ -18,7 +18,7 @@ const register = () => {
 
         } else {
             setCookie(username, password, 1);
-            setCookie('flag', 'true', 1);
+            setCookie('session_user', username, 1);
             location.href = 'index.html';
         }
         
@@ -33,7 +33,7 @@ const login = () => {
         const savedPassword = getCookie(username);
         e.preventDefault();
         if(savedPassword && password === savedPassword){
-            setCookie('flag', 'true', 1);
+            setCookie('session_user', username, 1);
             location.href = 'index.html';
         } else {
             
@@ -45,7 +45,7 @@ const login = () => {
 };
 
 const loggedIn = () => {
-    return getCookie('flag') ? true : false;
+    return getCookie('session_user') ? true : false;
 }
 
 if(url === 'login.html'){

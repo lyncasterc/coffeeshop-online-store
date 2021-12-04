@@ -140,7 +140,8 @@ const logout = () => {
 };
 
 
-if (url !== 'checkout.html') {
+if (url !== 'checkout.html' && url !== 'thankyou.html') {
+    console.log('sdf')
     deleteItem();
     addItem();
     updateQuantity();

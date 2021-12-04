@@ -1,4 +1,10 @@
-const checkoutItemsContainer = document.querySelector('#checkout-items');
+const checkoutItemsContainer = document.querySelector('#checkout-products');
+const checkoutSubtotal = document.querySelector('#subtotal');
+const taxNum = getSubtotal() * .10;
+const tax = document.querySelector('#tax');
+const total = document.querySelector('#total');
+const shipping = document.querySelector('#shipping');
+const orderBtn = document.querySelector('.order-btn');
 
 const renderCheckoutItems = () => {
     
@@ -8,21 +14,28 @@ const renderCheckoutItems = () => {
 };
 
 const createCheckoutItem = (itemID) => {
-    return `<div class="bag-slideout-item">
-        <div class="bag-item-info">
-            <img src="./images/${itemID}.jpg" alt="" width="100" height="100" style="object-fit: cover;">
-            <div class="bag-item-title">
-                <p class="item-title"> ${catalog[itemID]['name']} </p>
-            </div>
-        </div>
-        
-        <div class="price-quantity-container">
-            <div class="bag-item-price">
-                <span class="cart-title">PRICE</span> <br>
-                <span class="item-price">$${catalog[itemID]['price']}</span>
-            </div>
-        </div>
-    </div>`
+    return `<div class="checkout-product checkout-row">
+                <p>${catalog[itemID]['name'].toUpperCase()} <strong class="product-quantity">x${session_cart[itemID]}</strong> </p>
+                <p class="product-price">$${catalog[itemID]['price'] * session_cart[itemID]}</p>
+            </div>`
 };
 
-// renderCheckoutItems();
+const updateTotal = (shipping) =>{
+    total.innerHTML = `$${getSubtotal() + taxNum + parseFloat(shipping)}`;
+}
+
+renderCheckoutItems();
+updateTotal(shipping.value);
+checkoutSubtotal.innerHTML = `$${getSubtotal()}`;
+tax.innerHTML = `$${taxNum}`;
+
+shipping.addEventListener('change', (e) => {
+    updateTotal(e.target.value)
+});
+
+orderBtn.addEventListener('click', () =>{
+    localStorage.removeItem('session_cart');
+    location.href = 'thankyou.html';
+});
+
+

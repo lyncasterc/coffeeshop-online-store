@@ -11,6 +11,7 @@ const catalog = {
 };
 let session_cart = JSON.parse(localStorage.getItem('session_cart')) || {};
 
+
 const saveItem = () => {
     localStorage.setItem('session_cart', JSON.stringify(session_cart));
 };
@@ -52,12 +53,14 @@ const createItem = (itemID) => {
 };
 
 const addItem = () => {
-    addToCartBtn.addEventListener('click', (e) => {
-        const itemID = e.target.id;
-        session_cart[itemID] = (session_cart[itemID] + 1) || 1;
-        updateCart();
-        cartBtn.click();
-    });
+    if(addToCartBtn) {
+        addToCartBtn.addEventListener('click', (e) => {
+            const itemID = e.target.id;
+            session_cart[itemID] = (session_cart[itemID] + 1) || 1;
+            updateCart();
+            cartBtn.click();
+        });
+    }
 };
 
 const deleteItem = () => {
@@ -84,12 +87,16 @@ const updateCartCount = () => {
     })
 }
 
-const updateSubtotal = () => {
+const getSubtotal = () => {
     let subtotalCount = 0;
     for (const key in session_cart) {
         subtotalCount += catalog[key]['price'] * session_cart[key];
     }
-    subtotal.innerHTML = `$${subtotalCount}`;
+    return subtotalCount;
+};
+
+const updateSubtotal = (subtotal) => {
+    subtotal.innerHTML = `$${getSubtotal()}`;
 };
 
 const updateQuantity = () => {
@@ -117,7 +124,7 @@ const updateQuantity = () => {
 const updateCart = () => {
     saveItem(session_cart);
     updateCartCount();
-    updateSubtotal();
+    updateSubtotal(subtotal);
     renderItems();
 }
 
@@ -132,16 +139,13 @@ const logout = () => {
     });
 };
 
-// itemsList.addEventListener('click', (e) => {
-//     if(e.target.classList.contains('delete-item-btn')){
-//         deleteItem(e.target.getAttribute('data-id'));
-//         updateCart();
-//     }
-// });
 
-deleteItem();
-addItem();
-updateQuantity();
-updateCart();
+if (url !== 'checkout.html') {
+    deleteItem();
+    addItem();
+    updateQuantity();
+    updateCart();
+}
+
 logout();
 

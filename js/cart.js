@@ -51,12 +51,22 @@ const createItem = (itemID) => {
     </div>`
 };
 
-const addItem = (itemID) => {
-    session_cart[itemID] = (session_cart[itemID] + 1) || 1;
+const addItem = () => {
+    addToCartBtn.addEventListener('click', (e) => {
+        const itemID = e.target.id;
+        session_cart[itemID] = (session_cart[itemID] + 1) || 1;
+        updateCart();
+        cartBtn.click();
+    });
 };
 
-const deleteItem = (itemID) => {
-    delete session_cart[itemID];
+const deleteItem = () => {
+    itemsList.addEventListener('click', (e) => {
+        if(e.target.classList.contains('delete-item-btn')){
+            delete session_cart[e.target.getAttribute('data-id')];
+            updateCart();
+        }
+    });
 };
 
 const getCartCount = () => {
@@ -95,7 +105,7 @@ const updateQuantity = () => {
 
             if(session_cart[itemID] === 0){
                 
-                deleteItem(itemID);
+                delete session_cart[itemID];
             }   
 
             updateCart();
@@ -122,22 +132,15 @@ const logout = () => {
     });
 };
 
-if(addToCartBtn){
+// itemsList.addEventListener('click', (e) => {
+//     if(e.target.classList.contains('delete-item-btn')){
+//         deleteItem(e.target.getAttribute('data-id'));
+//         updateCart();
+//     }
+// });
 
-    addToCartBtn.addEventListener('click', (e) => {
-        addItem(e.target.id);
-        updateCart();
-        cartBtn.click();
-    });
-}
-
-itemsList.addEventListener('click', (e) => {
-    if(e.target.classList.contains('delete-item-btn')){
-        deleteItem(e.target.getAttribute('data-id'));
-        updateCart();
-    }
-});
-
+deleteItem();
+addItem();
 updateQuantity();
 updateCart();
 logout();

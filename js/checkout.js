@@ -7,7 +7,6 @@ const shipping = document.querySelector('#shipping');
 const orderBtn = document.querySelector('.order-btn');
 
 const renderCheckoutItems = () => {
-    
     for (const key in session_cart) {
         checkoutItemsContainer.innerHTML += createCheckoutItem(key);
     }
@@ -29,10 +28,12 @@ updateTotal(shipping.value);
 checkoutSubtotal.innerHTML = `$${getSubtotal()}`;
 tax.innerHTML = `$${taxNum}`;
 
+//updating total when shipping option is changed
 shipping.addEventListener('change', (e) => {
     updateTotal(e.target.value)
 });
 
+//handling click on place order button in
 orderBtn.addEventListener('click', () =>{
     localStorage.removeItem('session_cart');
     location.href = 'thankyou.html';

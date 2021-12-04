@@ -59,86 +59,63 @@
     
                 <li><a href="#" class="logout-btn">Sign out </a></li>
             </ul>
-    
-    
-            <!-- Cart Icon -->
-            <a id="cart" href="#" onclick="openSlideMenu('bag-slideout')">
-                <i class="las la-shopping-bag la-2x">
-                </i>
-                <span id="bag-item-count" class="cart-count"></span>
-            </a>
+            
         </div>
-
-
-        <!-- Cart slideout -->
-        <div id="bag-slideout" class="side-menu">
-            <div id="bag-slideout-header">
-                <p>Your Cart (<span class="cart-count"></span>)</p>
-                <a href="#" class="btn-close" onclick="closeSlideMenu('bag-slideout')">&times;</a>
-            </div>
-            <div id="bag-slideout-items">
-
-            </div>
-
-            <div class="cart-checkout-container">
-                <div class="subtotal-container">
-                    <span>SUBTOTAL</span>
-                    <span id="subtotal-count">$0</span>
-                </div>
-                <a href="#" id="cart-checkout-btn" class="red-btn"> Checkout </a>
-            </div>
-        </div>
+ 
     </nav>
 
+    <div class="checkout-container">
+        <h2>YOUR ORDER</h2>
 
-    <div class="form-container">
+        <div id="order-summary">
+            <h2 class="checkout-row">PRODUCT</h2>
+            <div id="checkout-products checkout-row">
 
-        <form action="#" id="shipping-form">
-            <div class="shipping-names">
-                <label for="first-name"> FIRST NAME </label>
-                <input type="text" name="first-name" id="first-name">
-    
-                <label for="last-name"> LAST NAME </label>
-                <input type="text" name="last-name" id="last-name">
-            </div>
-    
-            <label for="email">EMAIL</label>
-            <input type="email" name="email" id="email">
-    
-            <label for="address">ADDRESS</label>
-            <input type="text" name="address" id="address">
-    
-            <label for="city">CITY</label>
-            <input type="text" name="city" id="city">
-    
-            <label for="country">COUNTRY</label>
-            <input type="text" name="country" id="country">
-    
-            <label for="state">STATE/PROVINCE</label>
-            <input type="text" name="state" id="state">
-    
-            <label for="zipcode">ZIPCODE</label>
-            <input type="text" name="zipcode" id="zipcode">
-    
-            <label for="shipping">SHIPPING OPTIONS</label>
-            <select name="shipping" id="shipiing">
-                <option id="overnight" value="25">Overnight Delivery ($25)</option>
-                <option id="express" value="10">Express Delivery (2 days - $10)</option>
-                <option id="ground" value="25">Ground Delivery (5 days - free)</option>
-            </select>
-    
-            <h2>ORDER SUMMARY</h2>
-            <div id="checkout-items">
-    
-                <div class="checkout-item">
-                    
+                <div class="checkout-product checkout-row">
+                    <p>HARIO V60 <strong class="product-quantity">x2</strong> </p>
+                    <p class="product-price">$60</p>
+                </div>
+            
+                <div class="checkout-product checkout-row">
+                    <p>HARIO V60 <strong class="product-quantity">x2</strong> </p>
+                    <p class="product-price">$60</p>
+                </div>
+            
+                <div class="checkout-product checkout-row">
+                    <p>HARIO V60 <strong class="product-quantity">x2</strong> </p>
+                    <p class="product-price">$60</p>
                 </div>
             </div>
-    
-            <button type="submit" class="red-btn">Place Order</button>
-    
-        </form>
+
+            <div class="checkout-subtotal-container checkout-row">
+                <h2>SUBTOTAL</h2>
+                <p id="subtotal">$180</p>
+            </div>
+
+            <div class="checkout-shipping-container checkout-row">
+                <h2>SHIPPING</h2>
+                <select name="shipping" id="shipping">
+                    <option value="25">Overnight ($25)</option>
+                    <option value="10">Express (2 days - $10)</option>
+                    <option value="0">Ground (5 days - free)</option>
+                </select>
+            </div>
+
+            <div class="checkout-tax-container checkout-row">
+                <h2>TAX</h2>
+                <p id="tax">$0</p>
+            </div>
+
+            <div class="checkout-total-container checkout-row">
+                <h2>TOTAL</h2>
+                <p id="total">$0</p>
+            </div>
+
+        </div>
+        <a href="#" class="red-btn order-btn">Place Order</a>
+        <a href="products"> <i class="las la-undo"></i> Continue shopping</a>
     </div>
+
 
 
 
